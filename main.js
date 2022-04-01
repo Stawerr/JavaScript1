@@ -81,6 +81,7 @@ console.log('-------------------------EX6---------------------------------')
 
 function redGreen(){
     const list3 = document.querySelector('ul')
+
     for (let index = 0; index < vetor.length; index++) {
         const liEl = document.createElement('li')
         const liElRed=document.createElement('li')
@@ -117,8 +118,8 @@ vetor.forEach((p) => {
 });
 console.log('-------------------------EX8---------------------------------')
 const btn = document.querySelector('button')
-btn.onclick = function(){random()};
+btn.onclick = random;
 
 function random(){
-    
+
 }
