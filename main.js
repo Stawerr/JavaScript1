@@ -24,8 +24,6 @@ class Pessoa{
 
 }
 
-//const p = {nome: '', idade: 27, phone: 989898989}
-//console.log(p)
 console.log('-------------------EX1---------------------------------------')
 const pessoa1= new Pessoa({nome: 'Renato', idade: 27})
 
@@ -47,14 +45,14 @@ const vetor = [
     new Pessoa({nome: 'Antonino', idade: 6}),
 ]
 
-    console.log(vetor)
+vetor.forEach((p) => {
+    console.log( `${p.getNome()} - ${p.getIdade()}`)
+});
     console.log('----------------------EX3------------------------------------')   
 //Exercicio 3
-    for (let index = 0; index < vetor.length; index++) {
-        if (vetor[index].getIdade()>18) {
-            console.log(vetor[index].getNome())   
-        }
-    }
+vetor.forEach((p) => {
+    console.log( `${p.getNome()} - É maior de idade`)
+});
 
 //Exercicio 4
 function adicionarLi(i){
@@ -120,6 +118,12 @@ console.log('-------------------------EX8---------------------------------')
 const btn = document.querySelector('button')
 btn.onclick = random;
 
-function random(){
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min;
+  }
 
+function random(){
+    console.log(vetor[getRandomInt(0,10)].getNome())
 }
